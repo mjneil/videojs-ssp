@@ -11,6 +11,9 @@ const init = function(player, options) {
     if (!AudioContext) {
       return;
     }
+
+    player.addClass('vjs-ssp');
+
     try {
       const tech = player.tech({ IWillNotUseThisInPlugins: true });
       const context = new AudioContext();
